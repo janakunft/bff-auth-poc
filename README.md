@@ -26,11 +26,13 @@ The Node.js Proof of Concept (PoC) demonstrates the implementation of the Backen
 ## 3. Getting Started
 
 1. Clone this repository to your local machine using:
+
    ```
    git clone git@github.com:janakunft/bff-auth-poc.git
    ```
 
 2. Navigate to the project directory:
+
    ```
    cd bff-auth-poc
    ```
@@ -43,6 +45,7 @@ The Node.js Proof of Concept (PoC) demonstrates the implementation of the Backen
 ## 4. Project Structure
 
 - `server/`: Contains the Node.js server implementation.
+
   - `routes/`: Route handlers for different endpoints.
   - `config.js`: Configuration settings for the server.
   - `index.js`: Entry point of the Node.js server.
@@ -63,16 +66,19 @@ Adjust the configuration in `server/config.js` to match your environment:
 ## 6. Usage
 
 1. Set up FusionAuth:
+
    - Follow the instructions provided by FusionAuth in their tutorial: [How to Authenticate Your React App](https://fusionauth.io/blog/how-to-authenticate-your-react-app).
-   - Start FusionAuth using Docker or your preferred method. For example, if using Docker, it might run on port 9001.
+   - Start FusionAuth using Docker or your preferred method. For example, if using Docker, it might run on port 9011.
 
 2. Start the client:
+
    ```
    cd client
    npm start
    ```
 
 3. Start the Node.js server:
+
    ```
    cd server
    node index.js
