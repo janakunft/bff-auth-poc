@@ -58,10 +58,11 @@ The Node.js Proof of Concept (PoC) demonstrates the implementation of the Backen
 
 Adjust the configuration in `server/config.js` to match your environment:
 
-- `clientID`: Your EQ Connect client ID.
-- `clientSecret`: Your EQ Connect client secret.
-- `fusionAuthPort`: Port number for EQ Connect (e.g., 9011).
-- `serverPort`: Port number for the Node.js server (e.g., 3000).
+- `clientID`: Your Fusion Auth client ID.
+- `clientSecret`: Your Fusion Auth client secret.
+- `fusionAuthPort`: Port number for Fusion Auth (e.g., 9011).
+- `serverPort`: Port number for the Node.js server (e.g., 3001).
+- `clientPort`: Port number for the Node.js server (e.g., 3000).
 
 ## 6. Usage
 
