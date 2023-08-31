@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+**BFF Auth Proof of Concept (PoC) - README**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This README provides an overview and instructions for Proof of Concept (PoC) implementation of the Backend-for-Frontend (BFF) authentication pattern. The PoC demonstrates the authentication flow, token management, and API invocation using a Node.js environment.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. Introduction
+2. Prerequisites
+3. Getting Started
+4. Project Structure
+5. Configuration
+6. Usage
+7. Further Steps
+8. Credits
+9. License
 
-### `npm start`
+## 1. Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Node.js Proof of Concept (PoC) demonstrates the implementation of the Backend-for-Frontend (BFF) authentication pattern. It showcases how the frontend communicates with the backend to handle user authentication, token management, and secure API invocations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. Prerequisites
 
-### `npm test`
+- Node.js (version 20.0.0)
+- NPM (Node Package Manager)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Getting Started
 
-### `npm run build`
+1. Clone this repository to your local machine using:
+   ```
+   git clone git@github.com:janakunft/bff-auth-poc.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
+   ```
+   cd bff-auth-poc
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install project dependencies:
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4. Project Structure
 
-### `npm run eject`
+- `server/`: Contains the Node.js server implementation.
+  - `routes/`: Route handlers for different endpoints.
+  - `config.js`: Configuration settings for the server.
+  - `index.js`: Entry point of the Node.js server.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `client/`: Contains a sample frontend application to interact with the server.
+  - `src/`: Frontend source code.
+  - `public/`: Public assets.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 5. Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Adjust the configuration in `server/config.js` to match your environment:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `clientID`: Your EQ Connect client ID.
+- `clientSecret`: Your EQ Connect client secret.
+- `fusionAuthPort`: Port number for EQ Connect (e.g., 9011).
+- `serverPort`: Port number for the Node.js server (e.g., 3000).
 
-## Learn More
+## 6. Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Set up FusionAuth:
+   - Follow the instructions provided by FusionAuth in their tutorial: [How to Authenticate Your React App](https://fusionauth.io/blog/how-to-authenticate-your-react-app).
+   - Start FusionAuth using Docker or your preferred method. For example, if using Docker, it might run on port 9001.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Start the client:
+   ```
+   cd client
+   npm start
+   ```
 
-### Code Splitting
+3. Start the Node.js server:
+   ```
+   cd server
+   node index.js
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Open a browser and access the sample frontend by navigating to `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+5. Follow the interactive steps on the frontend to simulate user authentication and API invocations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 7. Further Steps
 
-### Making a Progressive Web App
+This PoC provides a simplified demonstration. For production, consider the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Enhanced error handling and security practices.
+- Integration with your chosen authentication service.
+- Deployment to a secure server environment.
 
-### Advanced Configuration
+## 8. Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is based on the tutorial provided by FusionAuth: [How to Authenticate Your React App](https://fusionauth.io/blog/how-to-authenticate-your-react-app). Credit goes to FusionAuth for their valuable guidance and resources.
 
-### Deployment
+## 9. License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the [MIT License](LICENSE).
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By following these instructions, you can set up and explore the Node.js Proof of Concept (PoC) that demonstrates the Backend-for-Frontend (BFF) authentication pattern. The PoC helps you understand the flow of user authentication, token management, and secure API invocations within a Node.js environment. Special credit is given to FusionAuth for their tutorial that contributed to the development of this PoC. Remember to follow the steps to set up FusionAuth and run the client and server components on their respective ports.
